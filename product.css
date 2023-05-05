@@ -39,8 +39,13 @@ body{
     background-color: chocolate;
     margin-left: 10px;
     cursor: pointer;
+    border-radius: 20px;
    
     
+}
+#navigate>#search i{
+    margin-left: 50px;
+    margin-top: 20px;
 }
 #navigate>#search h2{
     display: inline;
@@ -54,34 +59,91 @@ body{
     
     margin-left: 5%;
 }
+#map{
+    display: inline;
+    margin-left: 20px;
+    border: 2px solid rgb(37, 60, 37);
+    padding: 10px;
+}
+#sort{
+    margin-left:60%;
+}
 
 #left{
-    width: 23%;
-    border: 1px solid red;
+    width: 45%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
    
 }
-#left>#filter{
-    margin-left: 80px;
+#left p{
+ color: rgb(107, 107, 107);
 }
-#left>#discount{
-    margin-left: 80px;
-}
+
 #checkbox span{
     margin-left:10px;
     background-color: red;
     color: white;
 }
 .checkbox{
-    height: 3dvh;
+    width: 20px;
+    height:20px;
+
+}
+.checkbox1{
+    width: 20px;
+    height:20px;
+    display: block;
+
+
 }
 
 #produnct{
+    width: 80%;
     display: flex;
+    margin: auto;
 
 }
 #container{
+    
     display: flex;
 }
 .card{
     display:flex;
+    justify-content: space-between;
+}
+
+.checked{
+    color: orange;
+}
+.card{
+    margin-top: 15px;
+}
+.cardbody{
+    width: 60%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    text-align: justify;
+}
+.cardbody h2,h4,p{
+    margin-left: 20px;
+}
+.cardbody h2:hover{
+color: rgb(199, 202, 5);
+}
+.cardbody p{
+    color: dimgray;
+}
+.cardbody h4{
+    
+    color: darkgreen;
+}
+.cardbuy{
+    width: 25%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin-left: 15px;
+}
+.imagediv >img{
+    width: 100%;
+    
+}
+#container .pageBtn{
+   color: blue;
 }

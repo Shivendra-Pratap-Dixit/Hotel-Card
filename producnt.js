@@ -1,9 +1,39 @@
 
-let mainSection = document.getElementById("container");
 let baseUrl = `https://hid-food-apii.onrender.com/product_data`;
 
+// ***************main container**********
+let mainSection = document.getElementById("container");
+
+// ***************pagination*************
 let pagination = document.getElementById("pagination");
-let hotelLS = JSON.parse(localStorage.getItem("hotelCard"))
+
+// **************localStorage***********************
+let hotelLS = JSON.parse(localStorage.getItem("hotelCard"))||[];
+
+// ******************sort*********************
+
+let sortAtoZ = document.getElementById("atoz");
+let sortZtoA = document.getElementById("ztoa");
+let sortbyRating = document.getElementById("rating");
+
+let reviewFilter =document.getElementById("filter");
+
+reviewFilter.addEventListener("change",()=>{
+    fetchData();
+})
+
+function filterReview(data){
+
+if(reviewFilter.value==""){
+    displayHotel(data);
+}
+else{
+    data = data.filter((element)=>{
+        return element.review == reviewFilter.value;
+    })
+    displayHotel(data)
+}
+}
 
 window.addEventListener("load",fetchData(1))
 async function fetchData(Page){
@@ -18,6 +48,7 @@ async function fetchData(Page){
 
 
         let data = await responce.json();
+        filterReview(data)
         displayHotel(data);
     } catch (error) {
         console.log(error)
@@ -57,8 +88,8 @@ function displaycard(hotel){
 
         imagediv.append(image);
 
-        let cradbody = document.createElement("div");
-        cradbody.classList.add("cardbody");
+        let cardbody = document.createElement("div");
+        cardbody.classList.add("cardbody");
 
         let name = document.createElement("h2");
         name.textContent = hotel.name;
@@ -67,37 +98,104 @@ function displaycard(hotel){
         description.textContent  = hotel.details;
 
         let distance = document.createElement("p");
-        distance.textContent = hotel.distance;
+        distance.textContent = `Distance : ${hotel.distance}m`;
 
         let rateing = document.createElement("p");
         rateing.textContent = hotel.rateing;
 
         let review = document.createElement("h4");
-        review.textContent= hotel.review;
+        review.textContent= `Review of Hotel :- ${hotel.review}`;
 
-        cradbody.append(name,description,distance)
+        cardbody.append(name,description,distance,review)
 
         let cardbuy = document.createElement("div");
         cardbuy.classList.add("cardbuy");
         
         let price = document.createElement("p");
-        price.textContent = hotel.price;
+        price.textContent = `Price : ₹ ${hotel.price}`;
 
         let tax = document.createElement("p")
-        tax.textContent = hotel.tax;
+        tax.textContent = `Tax : ₹ ${hotel.tax}`;
 
         let buy = document.createElement("button");
         buy.classList.add("buybtn");
         buy.textContent = "Book Now"
+        
+        let stars = document.createElement("i")
+        stars.innerHTML = `<span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>`
         buy.addEventListener("click",()=>{
-
+            if(duplicate(hotel)){
+                alert(`${hotel.name} is already you Booking container`)
+            }
+            else {
+                alert(`You are book ${hotel.name}`);
+                    hotelLS.push(hotel);
+                      localStorage.setItem("hotelCard",JSON.stringify(hotelLS));
+           
+            }
+            
 
         })
-        cardbuy.append(price,tax,buy)
+        cardbuy.append(stars,price,tax,buy)
 
         
 
-        card.append(imagediv,cradbody,cardbuy)
+        card.append(imagediv,cardbody,cardbuy)
         return card;
 }
+
+    function duplicate(data){
+
+        for(let i =0; i<hotelLS.length; i++){
+
+            if(hotelLS[i].id==data.id){
+                return true;
+            }
+        }
+        return false;
+    }
    
+    // =====================sort======================
+
+   
+    function lowtohighPrice(){
+       fetch(`https://hid-food-apii.onrender.com/product_data?_sort=price&_order=asc`)
+       .then((res)=>{
+        return res.json()})
+        .then((data)=>{displayHotel(data)})
+        .catch(err=>console.log(err));
+    }
+
+   
+    function hightolowPrice(){
+        fetch(`${baseUrl}?_sort=price&_order=desc`)
+        .then((res)=>{
+            return res.json()})
+            .then(data=>{displayHotel(data)})
+            .catch(err=>console.log(err));
+    }
+
+  
+    function ratingSort(){
+        fetch(`${baseUrl}?_sort=price&_order=desc`)
+        .then((res)=>{
+            return res.json()})
+            .then(data=>{displayHotel(data)})
+            .catch(err=>console.log(err));
+    }
+
+    sortAtoZ.addEventListener("change",()=>{
+        lowtohighPrice()
+    })
+
+    sortZtoA.addEventListener("change",()=>{
+        hightolowPrice()
+    })
+
+    sortbyRating.addEventListener("change",()=>{
+        ratingSort()
+    })
