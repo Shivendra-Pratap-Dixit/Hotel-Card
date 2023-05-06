@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="https://hotelcard-files.ams3.cdn.digitaloceanspaces.com/media/appicons/ios/App-icon_152x152.jpg">
+    <title>Hotel Card</title>
+    <link rel="stylesheet" href="styles/signup.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    </head>
+<body>
+<div id="container">
+   
+   <div  id="left">
+    
+    <div id = "h2" class="alert alert-danger"></div>
+        <div class="floating-label">
+           <h1>Login to HotelCard</h1>
+           <p>Existing HotelCard members have been provided with the user data by E-Mail. New members will get the user data when purchasing a HotelCard.</p>
+           <a href="#" class="link-danger">Try HotelCard 6 months for CHF 79</a>
+       </div> 
+   
+       <div class="floating-label">
+               <input type="text" id="userEmail" name="myInput" required>
+               <label for="myInput">E-Mail</label>
+           </div>
+           <!--  -->
+           <!-- <div class="floating-label">
+               <input type="text" id="myInput" name="myInput" required>
+               <label for="myInput">Last Name</label>
+           </div> -->
+           <div class="floating-label">
+               <input type="password" id="userPassword" name="myInput" required>
+               <label for="myInput">Password</label>
+           </div>
+           <div class="llabel">
+            <div>
+               <input type="checkbox" >
+               <label >Remember me</label>
+            </div>
+            <div>
+               <a href="#" class="link-danger">Forget Password?</a>
+            </div>
+           </div>
+           <div class="floating-label">
+            <button class="button-28" id = "login-btn" role="button">Login</button>
+           </div>
+   
+   
+   </div>
+   <div  id="right">
+    <div id = "h1" class="alert alert-success"></div>
+        <form action="">
+         <div class="floating-label">
+            <h1>Get a free login</h1>
+            <p>With the free login you will get our newsletter. Upgrade to a HotelCard anytime.</p>
+        </div>   
+        <div class="floating-label">
+                <input type="text" id="email" name="myInput" required>
+                <label for="myInput">E-Mail</label>
+            </div>
+            <div class="floating-label">
+                <input type="text" id="first-name" name="myInput"  required>
+                <label for="myInput">First Name</label>
+            </div>
+            <div class="floating-label">
+                <input type="text" id="second-name" name="myInput" required>
+                <label for="myInput">Last Name</label>
+            </div>
+            <div class="floating-label">
+                <input type="password" id="password" name="myInput" required>
+                <label for="myInput">Password</label>
+            </div>
+            <div class="floating-label">
+                <input type="password" id="confirm-password" name="myInput" required>
+                <label for="myInput">Repeat Password</label>
+                
+            </div>
+            <div class="floating-label">
+            <div>
+                 <!-- HTML !-->
+                 <button class="button-28" id ="submit-btn" role="button">Get a Login</button>
+            </div>
+                <!-- <button type="button" class="btn btn-outline-danger">Danger</button> -->
+            </div>
+        </form>
+    </div>
+    
+</div>  
+    
+</body>
+<script src="scripts/admin.js" ></script>
+</html>
