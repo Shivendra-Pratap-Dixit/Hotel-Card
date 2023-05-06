@@ -12,28 +12,12 @@ let hotelLS = JSON.parse(localStorage.getItem("hotelCard"))||[];
 
 // ******************sort*********************
 
+
 let sortAtoZ = document.getElementById("atoz");
 let sortZtoA = document.getElementById("ztoa");
-let sortbyRating = document.getElementById("rating");
 
+let globle =[];
 let reviewFilter =document.getElementById("filter");
-
-reviewFilter.addEventListener("change",()=>{
-    fetchData();
-})
-
-function filterReview(data){
-
-if(reviewFilter.value==""){
-    displayHotel(data);
-}
-else{
-    data = data.filter((element)=>{
-        return element.review == reviewFilter.value;
-    })
-    displayHotel(data)
-}
-}
 
 window.addEventListener("load",fetchData(1))
 async function fetchData(Page){
@@ -48,18 +32,27 @@ async function fetchData(Page){
 
 
         let data = await responce.json();
-        filterReview(data)
+
+        
+        globle= data;
+
         displayHotel(data);
     } catch (error) {
         console.log(error)
     }
 }
+       
+        
+        
 
 function creatBtn(id){
+   
     let btn = document.createElement("button");
     btn.classList.add("pageBtn");
     btn.textContent = id;
     btn.addEventListener("click",()=>fetchData(id))
+   
+   
     return btn;
 }
 function displayHotel(data){
@@ -133,9 +126,8 @@ function displaycard(hotel){
             }
             else {
                 alert(`You are book ${hotel.name}`);
-                    hotelLS.push(hotel);
-                      localStorage.setItem("hotelCard",JSON.stringify(hotelLS));
-           
+                hotelLS.push({...hotel,day:1,Guest:0});
+                localStorage.setItem("hotelCard",JSON.stringify(hotelLS))
             }
             
 
@@ -162,40 +154,34 @@ function displaycard(hotel){
     // =====================sort======================
 
    
-    function lowtohighPrice(){
-       fetch(`https://hid-food-apii.onrender.com/product_data?_sort=price&_order=asc`)
-       .then((res)=>{
-        return res.json()})
-        .then((data)=>{displayHotel(data)})
-        .catch(err=>console.log(err));
-    }
-
+    sortAtoZ.addEventListener("click",function(){
+        let sH = [...globle]
+        sH = sH.sort(function(a,b){
+            return a.price-b.price
+        })
+        console.log(sH)
+        displayHotel(sH)
+        })
    
-    function hightolowPrice(){
-        fetch(`${baseUrl}?_sort=price&_order=desc`)
-        .then((res)=>{
-            return res.json()})
-            .then(data=>{displayHotel(data)})
-            .catch(err=>console.log(err));
-    }
-
-  
-    function ratingSort(){
-        fetch(`${baseUrl}?_sort=price&_order=desc`)
-        .then((res)=>{
-            return res.json()})
-            .then(data=>{displayHotel(data)})
-            .catch(err=>console.log(err));
-    }
-
-    sortAtoZ.addEventListener("change",()=>{
-        lowtohighPrice()
-    })
-
-    sortZtoA.addEventListener("change",()=>{
-        hightolowPrice()
-    })
-
-    sortbyRating.addEventListener("change",()=>{
-        ratingSort()
-    })
+        sortZtoA.addEventListener("click",function(){
+            let sH = [...globle]
+            sH = sH.sort(function(a,b){
+                return b.price-a.price
+            })
+            console.log(sH)
+            displayHotel(sH)
+            })
+    
+            
+        reviewFilter.addEventListener("change",()=>{
+                if(reviewFilter.value==""){
+                    displayHotel(globle);
+                }
+                else{
+                    data = globle.filter((element)=>{
+                        return element.review == reviewFilter.value;
+                    })
+                    displayHotel(data)
+                }
+    
+            })
