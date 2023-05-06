@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./product.css">
+    
+    <title>View All Hotels</title>
+</head>
+<body>
+     <nav></nav>
+     <div id="path">
+        <h3>Home / <span>view all hotels</span> </h3>
+     </div>
+     <div id="navigate">
+        <input type="search" id="sreachinput" placeholder="Destination, Hotel or">
+        <select name="distance" id="distance">
+            <option value="" id="km1">- km</option>
+            <option value="5km">+ 5 km</option>
+            <option value="10km">+ 10 km</option>
+            <option value="5km">+ 20 km</option>
+            <option value="5km">+ 30 km</option>
+            <option value="5km">+ 50 km</option>
+        </select>
+        <select name="" id="data">
+            <option value="">Anytime</option>
+
+        </select>
+        <select name="" id="guest">
+            <option value="">2 Guests</option>
+            <div id="adult">
+                <option value="adult">Adults 
+                <button>-</button>
+                <button>2</button>
+                <button>+</button>
+                </option>
+                
+            </div>
+            <div id="children">
+                <option value="children">Children
+                <button>-</button>
+                <button>0</button>
+                <button>+</button>
+                </option>
+            </div>
+            <div id="infants">
+                <option value="infants">Infants
+                <button>-</button>
+                <button>0</button>
+                <button>+</button>
+                </option>
+            </div>
+           
+        </select>
+        <div id="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h2>Search</h2>
+        </div>
+       
+     </div>
+     <div id="produnct">
+        <div id="left">
+            <div id="filter">
+            <p>Filter by:</p>
+            <p>Reset filters</p>
+            <hr>
+        </div>
+        <div  id="discount">
+            <h4>Discount</h4>
+            <div id="checkbox">
+                <li>
+                    <input type="checkbox" id="Discount50" class="checkbox"><span>50%</span>
+                </li>
+                <li>
+                    <input type="checkbox" id="Discount30" class="checkbox"><span>30%</span>
+                </li>
+                <li>
+                    <input type="checkbox" id="Discount10" class="checkbox"><span>10%</span>
+                </li>
+
+            </div>
+
+        </div>
+        </div>
+        <div id="right">
+                <select id="sort">
+                    <option value="">Sort By: Relevance</option>
+                    <option value="atoz">Price low to high</option>
+                    <option value="ztoa">Price high to low</option>
+                    <option value="rating">Best User rating</option>
+                </select>
+                    <div id="map">
+                        <i class="fa-solid fa-location-dot"> <span>Map View</span></i>
+                    </div>
+                <div id="container"></div>
+                <div id="pagination"></div>
+        </div>
+     </div>
+</body>
+        <script src="./producnt.js"></script>
+</html>

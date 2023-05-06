@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+ 
+.box{
+    min-height: 100vh;
+    
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    max-width: 70%;
+    min-height: 600px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /* border: 1px solid red; */
+}
+    .left,.right{
+        flex-basis: 50%;
+    }
+   
+    }
+    form{
+        
+        margin-left: 90px;
+    }
+    
+    
+    form>img{
+        width: 40px;
+        height: 35px;
+        margin-top: 5px;
+    }
+    .right input{
+        padding: 8px;
+        margin: 5px;
+        width: 150%;
+    }
+
+    button[type="submit"] {
+          background-color: rgb(247,77,77);
+          width: 80%;
+          color: white;
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+          margin-top: 10px;
+          margin-left: 60px;
+        }
+    h2{
+        text-align: center;
+        background-color:rgb(42,51,72);
+          color: white;
+          padding: 8px;
+          margin-left: 70px;
+          width: 120%;
+    }
+    
+
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="container">
+
+                    
+          
+
+<div class="right">
+    <h2>Payment</h2><br>
+    <form id="payment-form">
+        <label for="name">Accepted Payment Mode</label><br>
+        <img src="https://th.bing.com/th?id=OIP.eZvb56xjmEhYl5WUTFM4BwHaCO&w=350&h=105&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="">
+        <img src="https://th.bing.com/th?id=OIP.AJguJLQAnHpSAf3EoasTYwHaG7&w=258&h=241&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="">
+        <img src="https://th.bing.com/th?id=OIP.rl_j3EI-RMDdvvXcZPo1awHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="">
+        <img src="https://th.bing.com/th?id=OIP.Ue40NKqi8Lfd0lYYxoblrQHaD4&w=345&h=180&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt=""><br><br>
+        <h4 id="total-amount">Total Amount:</h4><br>
+        <label for="">Card Number</label>
+        <input type="number" id="card-number" name="card-number" placeholder="1234-5678-xxxx"  required><br>
+    
+        <label for="month"> Expiry Month</label>
+         <input type="month" id="month" name="month" placeholder="Enter Month" required><br>
+        
+         <label for="code">Code</label>
+         <input type="password" id="code" name="code" placeholder="code" required>
+         <button type="submit">Make Payment</button>
+       
+    </form>
+    
+</div>
+    
+        </div>
+        
+    </div>
+</body>
+<script>
+    let cnfbtn=document.querySelector("#payment-form");
+    cnfbtn.addEventListener("submit",function(){
+        alert("Your Hotel Booking is Done . Details Send To Your Email Address Thank you.")
+    })
+</script>
+</html>
