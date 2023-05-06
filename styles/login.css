@@ -177,6 +177,8 @@ p{
   display: none;
 }
 #h2{
+  width: 80%;
+  margin: auto;
   display: none;
 }
 

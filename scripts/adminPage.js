@@ -6,11 +6,68 @@ let two = document.getElementById("two")
 let three = document.getElementById("three")
 let bookURL="https://hid-food-apii.onrender.com/product_data"
 let page = 1
+let sortLow= document.getElementById("sort-low-to-high");
+let sortZtoABtn = document.getElementById("sort-high");
+
+
+
+sortZtoABtn.addEventListener("click",function(e){
+  e.preventDefault()
+  let sH = [...da]
+ sH = sH.sort(function(a,b){
+      return b.price-a.price
+  })
+  console.log(sH)
+  display(sH)
+ })
+
+
+
+let empNameInput = document.getElementById("Image Url");
+let empImgInput = document.getElementById("description");
+let empDeptInput = document.getElementById("rating");
+let empSalaryInput = document.getElementById("Price");
+let empCreateBtn = document.getElementById("add-book");
+let namee = document.getElementById("book-name")
+
+empCreateBtn.addEventListener("click",function(e){
+  e.preventDefault()
+  fetch(`https://hid-food-apii.onrender.com/product_data`,{
+    method:'POST',
+    body:JSON.stringify({
+      "name":namee.value,
+      "avatar":empNameInput.value,
+      "price":+empSalaryInput.value,
+      "image":empImgInput.value,
+      "review":empDeptInput.value
+    }),
+    headers: {
+      "Content-type":"application/json"
+    }
+    
+  }).then((res)=>res.json())
+  .then(function(data){
+    fetchy(1)
+    console.log(data)
+  })
+
+})
+
+let da;
+sortLow.addEventListener("click",function(){
+  let sH = [...da]
+ sH = sH.sort(function(a,b){
+      return a.price-b.price
+  })
+  console.log(sH)
+  display(sH)
+})
 fetchy(page)
 function fetchy(p){
 
 fetch(`https://hid-food-apii.onrender.com/product_data?_page=${p}&_limit=5`).then((res)=>res.json())
 .then(function(data){
+  da = [...data]
   console.log(data)
   display(data)
 })
@@ -19,13 +76,13 @@ let prev = document.getElementById("prev")
 let next = document.getElementById("next")
  
 one.addEventListener("click",function(){
-  fetch(1)
+  fetchy(1)
 })
 two.addEventListener("click",function(){
-  fetch(2)
+  fetchy(2)
 })
 three.addEventListener("click",function(){
-  fetch(3)
+  fetchy(3)
 })
 prev.addEventListener("click",function(){
   if(page!=0){
