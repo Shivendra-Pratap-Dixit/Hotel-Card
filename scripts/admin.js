@@ -6,7 +6,7 @@ let body = document.querySelector("body")
 userlogin.addEventListener("click",function(e){
     e.preventDefault()
     if(userEmail.value=="hidfood"&&userPassword.value=="hidfood"){
-        alert("NIce")
+        window.location.href="adminPage.html"
     }
     // }else{
     //     body.append(<div class="alert alert-danger alert-dismissible fade show">

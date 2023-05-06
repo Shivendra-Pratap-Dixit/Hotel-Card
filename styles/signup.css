@@ -1,32 +1,54 @@
-*{
+/* *{
     box-sizing: border-box;
-    font-family: "GT Walsheim";
+    
    
     
-}
+} */
 #container{
-    width: 100%;
+    width: 90%;
     margin: auto;
     display: flex;
+    font-family: "GT Walsheim";
     background-color: #eeecec;
+    /* border: 1px solid red; */
 }
 
 #left{
-    width: 40%;
-    margin: auto;
-    margin-top: 0px;
+    width: 50%;
+    
+   text-align: center;
    
-    padding: 30px;
+   
+   
     border-radius: 10px;
-    background-color:white;
-    color: rgb(24, 6, 6);
+    background-color: #ec2424;
+    color:white;
+   
+    display: flex;
+    align-items: center;
     
 }
+#left p{
+  font-size: 16px;
+  color:white;
 
-
+}
+#left button{
+  background-color: white;
+  color:red;
+}
+#left>div{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  
+}
 #right{
-    width: 40%;
-    margin: auto;
+    width: 50%;
+    
     
     padding: 30px;
     border-radius: 10px;
@@ -152,9 +174,7 @@ p{
 #h1{
   display: none;
 }
-#h2{
-  display: none;
-}
+
 
 .llabel{
   display: flex;

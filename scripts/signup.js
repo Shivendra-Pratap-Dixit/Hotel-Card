@@ -12,10 +12,10 @@ const form = document.querySelector('form');
 // Get the submit button element
 const submitBtn = document.querySelector('#submit-btn');
 let main = document.querySelector("#h1")
-let main1 = document.querySelector("#h2")
-let userPassword = document.querySelector("#userPassword")
-let userEmail = document.querySelector("#userEmail")
-let userlogin = document.querySelector("#login-btn")
+// 
+// let userPassword = document.querySelector("#userPassword")
+// let userEmail = document.querySelector("#userEmail")
+// let userlogin = document.querySelector("#login-btn")
 
 
 let dataa = JSON.parse(localStorage.getItem("notes")) || []
@@ -37,39 +37,41 @@ submitBtn.addEventListener('click', (event) => {
 		email,
 		password
 	};
-	
+	console.log(data)
   if (validateInput(firstName,listName, email, password, confirmPassword)) {
     dataa.push(data)
 	 localStorage.setItem("notes",JSON.stringify(dataa))
     main.style.display = "block"
     main.innerText = "Signup Sucessfully"
 	console.log(dataa)
+	alert( "Signup Sucessfully")
+	window.location.href="login.html"
 	}
 
 	form.reset();
 });
-userlogin.addEventListener("click",function(e){
-	e.preventDefault()
-let flag = false
-for(let i=0;i<dataa.length;i++){
-	console.log(dataa)
-	if((userEmail.value==dataa[i].email)&&(userPassword.value==dataa[i].password)){
-		flag = true
-		break
-	}
-console.log(userEmail.value,userPassword.value)
-}
-if(flag){
-	window.location.href="#"
-	alert("login Sucessfully")
-}else{
-	main1.style.display = "block"
-	main1.innerText="wrongPassword or user name"
-}
-userEmail.value=""
-userPassword.value=""
+// userlogin.addEventListener("click",function(e){
+// 	e.preventDefault()
+// let flag = false
+// for(let i=0;i<dataa.length;i++){
+// 	console.log(dataa)
+// 	if((userEmail.value==dataa[i].email)&&(userPassword.value==dataa[i].password)){
+// 		flag = true
+// 		break
+// 	}
+// console.log(userEmail.value,userPassword.value)
+// }
+// if(flag){
+	
+// 	alert("login Sucessfully")
+// }else{
+// 	main1.style.display = "block"
+// 	main1.innerText="wrongPassword or user name"
+// }
+// userEmail.value=""
+// userPassword.value=""
 
-})
+// })
 function validateInput(companyName, contactName, email, password, confirmPassword) {
 	
 	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
