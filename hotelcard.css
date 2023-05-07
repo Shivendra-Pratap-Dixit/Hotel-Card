@@ -1,6 +1,7 @@
 *{padding: 0;
     margin: 0;
-    box-sizing: border-box;}
+    box-sizing: border-box;
+}
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
     .nav{
         display: flex;
@@ -41,31 +42,108 @@
         
     }
    
-    .login>.log{
+    .login>a>.log{
         padding:18px 35px;
         border-radius: 25px;
         margin-left: 10px;
         font-weight: 800;
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
-    .login>#Hotelcard,.login>#Login:hover{
+    .login>a>#Hotelcard,.login>a>#Login:hover{
         background-color: #f74d4d;
         color: #ffffff;
         border: none;
     }
-    .login>#Hotelcard:hover,.login>#Login{
+    .login>a>#Hotelcard:hover,.login>a>#Login{
         background-color: #ffffff;
         color: #f74d4d;
         border:1px solid #f74d4d;
     }
 
+.cont{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+}
 
 
 
-
-    .card{
+    .cont>.card{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        width: 30vw;
+        height: 80vh;
+        text-align: center;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    .card>img{
+        width: 100%;
+        height: 35vh;
+        border-radius: 10px;
         
     }
+    .card>h2,p{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+    .card>button{
+        padding: 17px;
+        margin-top: 10px;
+background:rgb(95, 167, 73);
+border-radius: 15px;
+color: white;
+border: 1px solid black;
+    }
+    .card>button:hover{
+        padding: 18px;
+        margin-top: 10px;
+        color:rgb(95, 167, 73);
+border-radius: 15px;
+background-color: white;
+border: 1px solid rgb(95, 167, 73);
+transition: all 0.8s ease;
+    }
+
+
+.purchase{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+    .purchase>.form{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        width: 30%;
+        padding: 15px;
+    }
+    .form{
+        width: 50%;
+    }
+    [type="text"],[type="number"]{
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 15px;
+        margin-bottom: 18px;
+    }
+    .form>.submit{
+        padding: 15px 15px 15px 15px;
+        width: 150px;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 20px 0px 20px 0px;
+        background-color: dodgerblue;
+        color: aliceblue;
+        font-weight: 800;
+        justify-content: center;
+        align-items: center;
+    }
+
 
 
 
@@ -134,7 +212,7 @@
         margin: 0 10px 10px 0;
         text-align: center;
         line-height: 40px;
-        color:#000;
+        color:black;
         border-radius: 10px;
         transition: all 0.5s ease;
     }

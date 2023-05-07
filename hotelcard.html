@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy HotelCard</title>
     <link rel="stylesheet" href="hotelcard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
     
@@ -13,15 +14,15 @@
     <div class="nav">
         <div class="menu">
         <a  href="./index.html"><img id="bg" src="https://hotelcard.com/images/hotelcard-logo.png" alt=""></a>
-        <a class="anc" href="#">Buy the card</a>
+        <a class="anc" href="./hotelcard.html">Buy the card</a>
         <a class="anc" href="#">Book a hotel</a>
         <a class="anc" href="#">How it works</a>
         <a class="anc" href="#">About us</a>
         <a class="anc" href="#">Gift card</a>
         </div>
         <div class="login">
-            <button class="log" id="Hotelcard">Buy HotelCard</button>
-            <button class="log" id="Login">Login</button>
+            <a href="./hotelcard.html"><button class="log" id="Hotelcard">Buy HotelCard</button></a>
+            <a href=""><button class="log" id="Login">Login</button></a>
         </div>
         <div class="hamburger">
             <div class="line"></div>
@@ -32,26 +33,48 @@
         </div>
 
         <!-- card making for hotelcard  -->
-
+        <h1 style="text-align: center; font-style: italic;font-family: cursive;" class="title">Buy Hotel Card</h1>
+        <hr>
         <div class="cont">
             <div class="card">
                 <img src="https://hotelcard-files.ams3.cdn.digitaloceanspaces.com/media/cardimgs/Trial_Hotelcard_Flat_2022.jpg" alt="">
                 <h2>Trial Membership For 1 Year</h2>
-                <p>Book Hotel From anywhere</p>
-                <p>Get 20% on Postpaid</p>
-                <p>Get 50% on Prepaid<FontAwesomeIcon icon="fa-solid fa-check" /></p>
-                <p>Try Now and Have Some discount</p>
+                <p><i class="fa-solid fa-check"></i> &nbsp;Book Hotel From anywhere</p>
+                <p><i class="fa-solid fa-check"></i> &nbsp;Get 20% on Postpaid</p>
+                <p><i class="fa-solid fa-check"></i> &nbsp;Get 50% on Prepaid</p>
+                <p><i class="fa-solid fa-check"></i> &nbsp;Try Now and Have Some discount</p>
                 <button>Try Now for Just ₹499</button>
             </div>
             <div class="card">
                 <img src="https://hotelcard-files.ams3.cdn.digitaloceanspaces.com/media/cardimgs/Personal_Hotelcard_Flat_2022.jpg" alt="">
-                <h2><i class="fa-regular fa-circle-check"></i>Membership For 3 Years</h2>
-                <p><i class="fa-regular fa-circle-check"></i>Book Hotel From anywhere</p>
-                <p>Book Your Room in Just 1 minute<i class="fa-regular fa-circle-check"></i></p>
-                <p>Get 70% on Prepaid</p>
-                <p>Try Now and Have Some discount</p>
+                <h2>Membership For 3 Years</h2>
+                <p><i class="fa-solid fa-check"></i> &nbsp; Book Hotel From anywhere</p>
+                <p><i class="fa-solid fa-check"></i> &nbsp;Book Your Room in Just 1 minute</p>
+                <p><i class="fa-solid fa-check"></i> &nbsp;Get 70% on Prepaid</p>
+                <p><i class="fa-solid fa-check"></i> &nbsp;Try Now and Have Some discount</p>
                 <button>Try Now for Just ₹999</button>
             </div>
+        </div>
+
+        <!-- Form for buying the hotel Card -->
+
+        <div class="purchase">
+            <form class="form" >
+                <label for="Email"><i class="fa-sharp fa-regular fa-envelope"></i>&nbsp;Email</label>
+<input type="text" name="Email" placeholder="xyz@mail.com" required>
+<label for="Name">Name</label>
+<input type="text" name="Name" placeholder="Enter the Name" required>
+<label for="Mobile"><i class="fa-solid fa-mobile"></i>&nbsp;Mobile</label>
+<input type="text" name="Mobile" placeholder="XXXXXXXXXX" required>
+<label for="add"><i class="fa-solid fa-home"></i>&nbsp;Adress</label>
+<input type="text" name="add" placeholder="Building no:" required>
+<label for="Zip">Zip code</label>
+<input type="number" name="Zip" placeholder="Zip Code" required>
+
+
+<button class="submit">Buy Now</button>
+            </form>
+            
         </div>
 
 
@@ -121,3 +144,16 @@
         </footer>
 </body>
 </html>
+<script>
+    // let form=document.querySelector("section");
+    let submitbtn=document.getElementsByClassName("submit");
+    submitbtn.addEventListener("click",function(){
+        alert("Card Buy Succesfully");
+    });
+</script>
+<!-- <script>
+    let cnfbtn=document.querySelector("button");
+    cnfbtn.addEventListener("click",function(){
+        alert("Order Placed Succesfully . ORDER details send to your email address Thank you.")
+    })
+</script> -->
