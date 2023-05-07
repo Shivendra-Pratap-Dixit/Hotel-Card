@@ -42,19 +42,19 @@
         
     }
    
-    .login>.log{
+    .login>a>.log{
         padding:18px 35px;
         border-radius: 25px;
         margin-left: 10px;
         font-weight: 800;
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
-    .login>#Hotelcard,.login>#Login:hover{
+    .login>a>#Hotelcard,.login>a>#Login:hover{
         background-color: #f74d4d;
         color: #ffffff;
         border: none;
     }
-    .login>#Hotelcard:hover,.login>#Login{
+    .login>a>#Hotelcard:hover,.login>a>#Login{
         background-color: #ffffff;
         color: #f74d4d;
         border:1px solid #f74d4d;
@@ -107,6 +107,143 @@
         padding: 0px 25px 0px 25px;
         font-size: 20px;
     }
+    .containe{
+        max-width: 1170px;
+        margin: auto;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    ul{
+        list-style: none;
+    }
+    .footer{
+        background-color:#1f1b22;
+        padding:70px 0
+    
+    }
+    .footer-col{
+    width: 25%;
+    padding: 0 15px;
+    }
+    .footer-col h4{
+        font-size: 25px;
+        color:whitesmoke;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+        position: relative;
+    
+    }
+    .footer-col h4::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        background-color:red;
+        height: 2px;
+        box-sizing: border-box;
+        width: 200px;
+    }
+    .footer-col ul li:not(last-chlid){
+        margin-bottom: 15px;
+    }
+    .footer-col ul li a{
+        font-size: 16px;
+        text-transform: capitalize;
+        color:#fefefe;
+        text-decoration: none;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    .footer-col ul li a:hover{
+        color: teal;
+        padding-left: 8px;
+    }
+    .footer-col .social-links a{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color:#fefefe;
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        color:#000;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+    }
+    .footer-col .social-links a:hover{
+        color: brown;
+        padding-left: 10px;
+    }
+    @media (max-width: 750px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+        
+    }
+    section  h1{
+        font-family:  sans-serif;
+        font-size: 5ch;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        
+    }
+    .container>.card{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        padding: 10px;
+        height: 55vh;
+        width: 47vh;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        justify-content: space-around;
+    }
+    .container>.card>.bookbtn{
+        padding: 15px;
+        margin: 12px 5px 15px 5px;
+        border-radius: 20px;
+        border:none;
+        background-color: #f74d4d;
+        color: #fefefe;
+        cursor: pointer;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .image>img{
+        width: 100%;
+        height: 200px;
+        border-radius: 5px;
+    }
+    .card>.card-head{
+        font-size: 25px;
+        font-weight: 800;
+    }
+    .card>h6{
+        font-size: 15px;
+    }
+    .card>.rating{
+        font-size: 15px;
+        font-weight: 800;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+    .card>.price{
+        font-size: 25px;
+        font-weight: 800;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    .card>.rating>.green{
+        background: teal;
+        padding: 5px;
+        border-radius: 10px;
+    }
     @media only screen and (max-width:800px){
         .hamburger{
             display: block;
@@ -123,17 +260,26 @@
             display: none;
         }
     }
-    @media only screen and (max-width:1000px){
+    @media only screen and (max-width:1100px){
         .nav{
             padding: 0 70px;
         }
         .input_ref>.Form{
             grid-template-columns: repeat(3,1fr);
         }
+        .container{
+            grid-template-columns: repeat(3,1fr);
+            
+        }
+
     }
-    @media only screen and (max-width:900px){
+    @media only screen and (max-width:1000px){
         .nav{
             padding: 0 50px;
+        }
+        .container{
+            grid-template-columns: repeat(2,1fr);
+            
         }
     }
     @media only screen and (max-width:850px){
@@ -144,4 +290,9 @@
         .input_ref>.Form{
             grid-template-columns: repeat(2,1fr);
         }
+        .container{
+            grid-template-columns: repeat(1,1fr);
+            
+        }
     }
+    
