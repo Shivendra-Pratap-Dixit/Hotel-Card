@@ -120,7 +120,8 @@
     }
     .footer{
         background-color:#1f1b22;
-        padding:70px 0
+        padding:70px 0;
+        display: flex;
     
     }
     .footer-col{
