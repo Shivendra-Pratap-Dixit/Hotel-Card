@@ -7,6 +7,7 @@
     <title>Booking page</title>
 
     <style>
+
       *{
         font-family: 'Poppins', sans-serif;
       }
@@ -132,7 +133,6 @@
    
 
 
-
         #booking-container{
             width: 90%;
             /* border: 1px solid red; */
@@ -142,11 +142,18 @@
             gap: 15px;
             box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
             padding: 20px;
+
             margin-top: 40px;
             margin-bottom: 30px;
         
         }
         #box3{
+
+            margin-top: 30px;
+        
+        }
+        #box1{
+
             width: 30%;
             /* border: 1px solid green; */
             text-align: center;
@@ -157,16 +164,25 @@
             /* border: 1px solid yellow; */
             /* text-align: center; */
         }
+
         #box1{
+
+        #box3{
+
             width: 30%;
           /* border: 1px solid red; */
         }
 
+
         #box1>img{
+
+        #box3>img{
+
             width: 100%;
             /* margin-left: 20px; */
             border-radius: 20px;
         }
+
 
 
        @media screen and (max-width:500px){
@@ -263,11 +279,12 @@
         margin-bottom: 30px;
     }
         
-    }
+ 
        
     </style>
 </head>
 <body>
+
 
   <!-- navbar -->
   <div class="nav">
@@ -298,6 +315,7 @@
 
 
 
+
 <div id="booking-container">
     <div id="box1">
   <!-- append here -->
@@ -310,6 +328,7 @@
     <!-- append here -->
     </div>
 </div>
+
 
     <!-- footer -->
 
@@ -375,13 +394,17 @@
       </div>
   </footer>
 
+
     
 </body>
 
 <script>
 
 let hotelLS = JSON.parse(localStorage.getItem("hotelCard"))||[]
+
 console.log(hotelLS)
+
+
 let bookingcontainer=document.getElementById("booking-container")
 let box1=document.getElementById("box1")
 let box2=document.getElementById("box2")
@@ -422,10 +445,16 @@ function displayhotel(data){
        
       let Increaseforday=document.createElement("button");
         Increaseforday.textContent="+"
+
         Increaseforday.style.backgroundColor="black"
         Increaseforday.style.color="white"
         Increaseforday.style.padding="8px"
         Increaseforday.style.borderRadius="5px"
+
+        Increaseforday.style.backgroundColor="white"
+        Increaseforday.style.color="black"
+        Increaseforday.style.padding="3px"
+
 
         Increaseforday.addEventListener("click",()=>{
         element=element.day++;
@@ -443,11 +472,18 @@ function displayhotel(data){
         
         let Decreaseforday=document.createElement("button");
         Decreaseforday.textContent="-"
+
         Decreaseforday.style.backgroundColor="black"
         Decreaseforday.style.color="white"
         Decreaseforday.style.padding="8px"
         Decreaseforday.style.marginLeft="3px"
         Decreaseforday.style.borderRadius="5px"
+
+
+        Decreaseforday.style.backgroundColor="white"
+        Decreaseforday.style.color="black"
+        Decreaseforday.style.padding="3px"
+        Decreaseforday.style.marginLeft="3px"
 
 
 
@@ -465,10 +501,15 @@ function displayhotel(data){
 
         let Increaseforguest=document.createElement("button");
         Increaseforguest.textContent="+"
+
         Increaseforguest.style.backgroundColor="black"
         Increaseforguest.style.color="white"
         Increaseforguest.style.padding="8px"
         Increaseforguest.style.borderRadius="5px"
+
+        Increaseforguest.style.backgroundColor="white"
+        Increaseforguest.style.color="black"
+        Increaseforguest.style.padding="3px"
 
 
         Increaseforguest.addEventListener("click",()=>{
@@ -487,11 +528,18 @@ function displayhotel(data){
 
         let Decreaseforguest=document.createElement("button");
         Decreaseforguest.textContent="-"
+
         Decreaseforguest.style.backgroundColor="black"
         Decreaseforguest.style.color="white"
         Decreaseforguest.style.padding="8px"
         Decreaseforguest.style.marginLeft="3px"
         Decreaseforguest.style.borderRadius="5px"
+
+
+        Decreaseforguest.style.backgroundColor="white"
+        Decreaseforguest.style.color="black"
+        Decreaseforguest.style.padding="3px"
+        Decreaseforguest.style.marginLeft="3px"
 
 
 
@@ -530,7 +578,11 @@ function displayhotel(data){
         
       let paybtn=document.createElement("button");
       paybtn.textContent="PROCEED TO BOOKING"
+
       paybtn.style.backgroundColor="rgb(247,77,77)"
+
+      paybtn.style.backgroundColor=" rgb(247,77,77)"
+
       paybtn.style.color="white";
       paybtn.style.border="none"
       paybtn.style.width="250px";
@@ -547,9 +599,15 @@ function displayhotel(data){
         
       })
 
+
       box3.append(day,Increaseforday,Decreaseforday,guest,paragraphguest,Increaseforguest,Decreaseforguest,totalprice,paragraph,paybtn)
       box2.append(title,details,rating,price)
       box1.append(image)
+
+      box1.append(day,Increaseforday,Decreaseforday,guest,paragraphguest,Increaseforguest,Decreaseforguest,totalprice,paragraph,paybtn)
+      box2.append(title,details,rating,price)
+      box3.append(image)
+
       bookingcontainer.append(box1,box2,box3)
 
 
