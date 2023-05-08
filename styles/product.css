@@ -294,7 +294,7 @@ select {
 
 .imagediv>img {
     width: 100%;
-    border: 2px solid rgb(255, 52, 52);
+    /* border: 2px solid rgb(255, 52, 52); */
     padding: 2px;
 }
 
