@@ -119,12 +119,30 @@ function displaycard(hotel) {
                             <span class="fa fa-star"></span>`
     buy.addEventListener("click", () => {
         if (duplicate(hotel)) {
-            alert(`${hotel.name} is already you Booking container`)
+            // swal(`${hotel.name}`,`is aleary add to your Booking cart`,"warning")
+            Swal.fire({
+                title: `${hotel.name}`,
+                text: `Is Already In You Book Cart`,
+                imageUrl: `${hotel.avatar}`,
+                imageWidth: 400,
+                imageHeight: 200,
+                imageAlt: 'Custom image',
+              })
         }
         else {
-            alert(`You are book ${hotel.name}`);
+            // swal(`${hotel.name}`,`is Select for Booking `,"success");
+            Swal.fire({
+                title: `${hotel.name}`,
+                text: `Is Select For Booking`,
+                imageUrl: `${hotel.avatar}`,
+                imageWidth: 400,
+                imageHeight: 200,
+                imageAlt: 'Custom image',
+               
+              })
             hotelLS.push({ ...hotel, day: 1, Guest: 0 });
             localStorage.setItem("hotelCard", JSON.stringify(hotelLS))
+            window.location.href="./booking.html"
         }
 
 
@@ -185,7 +203,7 @@ reviewFilter.addEventListener("change", () => {
     }
     else {
         data = globle.filter((element) => {
-            return element.review == reviewFilter.value;
+            return element.review === reviewFilter.value;
         })
         displayHotel(data)
     }
