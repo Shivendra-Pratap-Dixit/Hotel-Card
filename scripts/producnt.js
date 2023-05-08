@@ -118,19 +118,7 @@ function displaycard(hotel) {
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star"></span>`
     buy.addEventListener("click", () => {
-        if (duplicate(hotel)) {
-            // swal(`${hotel.name}`,`is aleary add to your Booking cart`,"warning")
-            Swal.fire({
-                title: `${hotel.name}`,
-                text: `Is Already In You Book Cart`,
-                imageUrl: `${hotel.avatar}`,
-                imageWidth: 400,
-                imageHeight: 200,
-                imageAlt: 'Custom image',
-              })
-        }
-        else {
-            // swal(`${hotel.name}`,`is Select for Booking `,"success");
+       
             Swal.fire({
                 title: `${hotel.name}`,
                 text: `Is Select For Booking`,
@@ -143,9 +131,7 @@ function displaycard(hotel) {
             hotelLS.push({ ...hotel, day: 1, Guest: 0 });
             localStorage.setItem("hotelCard", JSON.stringify(hotelLS))
             window.location.href="./booking.html"
-        }
-
-
+      
     })
     cardbuy.append(stars, price, tax, buy)
 
