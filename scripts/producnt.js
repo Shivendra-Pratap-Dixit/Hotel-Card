@@ -117,9 +117,9 @@ function displaycard(hotel) {
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star"></span>`
-    buy.addEventListener("click", () => {
-       
-            Swal.fire({
+    buy.addEventListener("click", (event) => {
+       event.preventDefault();
+         Swal.fire({
                 title: `${hotel.name}`,
                 text: `Is Select For Booking`,
                 imageUrl: `${hotel.avatar}`,
@@ -130,8 +130,8 @@ function displaycard(hotel) {
               })
             hotelLS.push({ ...hotel, day: 1, Guest: 0 });
             localStorage.setItem("hotelCard", JSON.stringify(hotelLS))
-            window.location.href="./booking.html"
-      
+            //   console.log("ok")
+ 
     })
     cardbuy.append(stars, price, tax, buy)
 
@@ -188,9 +188,10 @@ reviewFilter.addEventListener("change", () => {
         displayHotel(globle);
     }
     else {
-        data = globle.filter((element) => {
+       let data = globle.filter((element) => {
             return element.review === reviewFilter.value;
         })
+        console.log(data)
         displayHotel(data)
     }
 
