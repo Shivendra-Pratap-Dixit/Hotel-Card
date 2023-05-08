@@ -23,37 +23,49 @@ sortZtoABtn.addEventListener("click",function(e){
 
 
 
-let empNameInput = document.getElementById("Image Url");
-let empImgInput = document.getElementById("description");
-let empDeptInput = document.getElementById("rating");
-let empSalaryInput = document.getElementById("Price");
-let empCreateBtn = document.getElementById("add-book");
+
 let namee = document.getElementById("book-name")
+let empNameInput = document.getElementById("book-image");
+let empImgInput = document.getElementById("book-category");
+let empDeptInput = document.getElementById("book-author");
+let empSalaryInput = document.getElementById("book-price");
+let empCreateBtn = document.getElementById("add-book");
+let da;
 
 empCreateBtn.addEventListener("click",function(e){
   e.preventDefault()
-  fetch(`https://hid-food-apii.onrender.com/product_data`,{
-    method:'POST',
-    body:JSON.stringify({
-      "name":namee.value,
-      "avatar":empNameInput.value,
-      "price":+empSalaryInput.value,
-      "image":empImgInput.value,
-      "review":empDeptInput.value
-    }),
-    headers: {
-      "Content-type":"application/json"
-    }
+  // fetch(`https://hid-food-apii.onrender.com/product_data`,{
+  //   method:'POST',
+  //   body:JSON.stringify({
+  //     "name":namee.value,
+  //     "avatar":empNameInput.value,
+  //     "price":+empSalaryInput.value,
+  //     "image":empImgInput.value,
+  //     "review":empDeptInput.value
+  //   }),
+  //   headers: {
+  //     "Content-type":"application/json"
+  //   }
     
-  }).then((res)=>res.json())
-  .then(function(data){
-    fetchy(1)
-    console.log(data)
-  })
-
+  // }).then((res)=>res.json())
+  // .then(function(data){
+  //   fetchy()
+  //   console.log(data)
+  // })
+  let ob={
+    "name":namee.value,
+    "avatar":empNameInput.value,
+    "price":+empSalaryInput.value,
+    "image":empImgInput.value,
+    "review":empDeptInput.value
+  }
+  da.push(ob)
+  display(da)
 })
 
-let da;
+
+
+
 sortLow.addEventListener("click",function(){
   let sH = [...da]
  sH = sH.sort(function(a,b){
@@ -107,7 +119,7 @@ function display(data){
   let cardList = document.createElement("div")
   cardList.className="card-list"
   mainSection.append(cardList)
-  data.forEach(function(a){
+  data.forEach(function(a,i){
     let mainCard = document.createElement('div')
     mainCard.className="card"
 
@@ -144,6 +156,7 @@ function display(data){
         anc.className = ""
         anc.innerText = "Edit"
         anc.href = "#"
+        anc.style.display="block"
         anc.setAttribute("data-id",a.id)
 
 
@@ -152,12 +165,44 @@ function display(data){
         but.className = "btn btn-primary"
         but.setAttribute("data-id",a.id)
 
-        cardBody.append(h4,aut,car,pri,but)
+        cardBody.append(h4,aut,car,pri,anc,but)
 
         mainCard.append(divImg,cardBody)
        
         cardList.append(mainCard)
+        anc.addEventListener("click",function(e){
+          e.preventDefault()
+          let div = document.createElement("div")
+          div.id="id=edit_div"
 
+          let input = document.createElement("input")
+          input.id = "edit_title"
+          input.className="form-control"
+          input.placeholder= "title"
+          
+          let des = document.createElement("input")
+          des.id = "edit_description"
+          des.placeholder= "description"
+          des.className="form-control form-control-lg"
+
+          let btnEdit = document.createElement("button")
+          btnEdit.innerText = "Submit"
+          btnEdit.id="edit_submit_btn"
+          btnEdit.className="btn btn-info"
+          div.append(input,des,btnEdit)
+          cardBody.append(div)
+          mainCard.append(cardBody)
+
+          btnEdit.addEventListener("click",function(e){
+            e.preventDefault()
+              da[i].name = input.value
+          da[i].description = des.value
+          localStorage.setItem("notes",JSON.stringify(da))
+          display(da)
+          })
+          
+
+      })
         but.addEventListener("click",function(){
           fetch(`${bookURL}/${a.id}`,{
           method:"DELETE",
@@ -169,9 +214,7 @@ function display(data){
           fetchy()
         })
         // 
-        anc.addEventListener("click",function(e){
-          e.preventDefault()
-        })
+        
 
         })
         
