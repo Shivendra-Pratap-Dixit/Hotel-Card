@@ -7,6 +7,117 @@
     <title>Details page</title>
 
     <style>
+
+     *{
+      font-family: 'Poppins', sans-serif;
+     }
+
+
+      .nav{
+        display: flex;
+        width: 100%;
+        height: 75px;
+        margin: 0 ,auto;
+        background-color: #ffffff;
+        align-items:center;
+        position: sticky;
+        top: 0;
+        
+    }
+      
+    .menu{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 65%;
+        height: 75px;
+        
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+        font-family: 'Poppins', sans-serif;
+        font-weight:600;
+    }
+    #bg{
+        width: 85%;
+        height: 70px;
+    }
+    .login{
+        display: flex;
+        height: 75px;
+        width: 40%;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        
+    }
+   
+    .login>.log{
+        padding:18px 35px;
+        border-radius: 25px;
+        margin-left: 10px;
+        font-weight: 800;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .login>#Hotelcard,.login>#Login:hover{
+        background-color: #f74d4d;
+        color: #ffffff;
+        border: none;
+    }
+    .login>#Hotelcard:hover,.login>#Login{
+        background-color: #ffffff;
+        color: #f74d4d;
+        border:1px solid #f74d4d;
+    }
+
+
+    /* @media only screen and (max-width:1100px){
+        .nav{
+            padding: 0 70px;
+        }
+        .input_ref>.Form{
+            grid-template-columns: repeat(3,1fr);
+        }
+        .container{
+            grid-template-columns: repeat(3,1fr);
+            
+        }
+
+    }
+    @media only screen and (max-width:1000px){
+        .nav{
+            padding: 0 50px;
+        }
+        .container{
+            grid-template-columns: repeat(2,1fr);
+            
+        }
+    }
+    @media only screen and (max-width:850px){
+        .nav{
+            padding: 0 40px;
+            margin:0 5px
+        }
+        .input_ref>.Form{
+            grid-template-columns: repeat(2,1fr);
+        }
+        .container{
+            grid-template-columns: repeat(1,1fr);
+            
+        }
+    }
+    
+    
+     */
+      /* navbar */
+
+
+
+
+
+
         
         #container{
             width: 35%;
@@ -62,11 +173,129 @@
           background-color:  rgb(247,77,77);
         }
 
+          
+
+         /* footer */
+
+       
+    .containe{
+        max-width: 1170px;
+        margin: auto;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    ul{
+        list-style: none;
+    }
+    .footer{
+        background-color:#1f1b22;
+        padding:70px 0
+    
+    }
+    .footer-col{
+    width: 25%;
+    padding: 0 15px;
+    }
+    .footer-col h4{
+        font-size: 25px;
+        color:whitesmoke;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+        position: relative;
+    
+    }
+    .footer-col h4::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        background-color:red;
+        height: 2px;
+        box-sizing: border-box;
+        width: 200px;
+    }
+    .footer-col ul li:not(last-chlid){
+        margin-bottom: 15px;
+    }
+    .footer-col ul li a{
+        font-size: 16px;
+        text-transform: capitalize;
+        color:#fefefe;
+        text-decoration: none;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    .footer-col ul li a:hover{
+        color: teal;
+        padding-left: 8px;
+    }
+    .footer-col .social-links a{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color:#fefefe;
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        color:black;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+    }
+    .footer-col .social-links a:hover{
+        color: brown;
+        padding-left: 10px;
+    }
+
+    @media (max-width: 750px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+        
+    }
+
 
 
     </style>
 </head>
 <body>
+
+
+  <!-- navbar -->
+  <div class="nav">
+    <div class="menu">
+    <a  href="./index.html"><img id="bg" src="https://hotelcard.com/images/hotelcard-logo.png" alt=""></a>
+    <a class="anc" href="#">Buy the card</a>
+    <a class="anc" href="#">Book a hotel</a>
+    <a class="anc" href="#">How it works</a>
+    <a class="anc" href="#">About us</a>
+    <a class="anc" href="#">Gift card</a>
+    </div>
+    <div class="login">
+        <button class="log" id="Hotelcard">Buy HotelCard</button>
+        <button class="log" id="Login">Login</button>
+    </div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+
+    </div>
+    </div>
+
+
+          <!-- navbar -->
+
+
+
+
+
+
+
+
+
     <div  id="container">
         <h2>Details</h2>
         <form id="details-form">
@@ -101,6 +330,72 @@
           
 
     </div>
+
+
+             <!-- footer -->
+
+             <footer class="footer">
+              <div class="containe">
+               <div class="row">
+                  <div class="footer-col">
+                      <h4>About Hotel Card</h4>
+                      <ul>
+                          <li><a href="#">About Us</a></li>
+                          <li><a href="#">Investor Information</a></li>
+                          <li><a href="#">Organizational Accounts</a></li>
+                          <li><a href="#">Newsroom</a></li>
+                          <li><a href="#">Real Estate</a></li>
+                          <li><a href="#">Vendors</a></li>
+                          <li><a href="#">FAQs</a></li>
+          
+                      </ul>
+                  </div>
+                  <div class="footer-col">
+                      <h4>Experience</h4>
+                      <ul>
+                          <li><a href="#">Wellness hotels and spa</a></li>
+                          <li><a href="#">Track My Bookings</a></li>
+                          <li><a href="#">Boutique hotels</a></li>
+                          <li><a href="#">Accessibility Statement</a></li>
+                          <li><a href="#">Accessbility Support</a></li>
+                          <li><a href="#">Mountain bike hotels</a></li>
+                          <li><a href="#">Mountain hotels</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-col">
+                      <h4>Hotel Offers</h4>
+                      <ul>
+                          <li><a href="#">Best price guarantee</a></li>
+                          <li><a href="#">Hotels in Zürich</a></li>
+                          <li><a href="#">Hotels in Davos</a></li>
+                          <li><a href="#">Hotels in Genf</a></li>
+                          <li><a href="#">Hotels in Lausanne</a></li>
+                          <li><a href="#">Hotels in Saas-Fee</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-col">
+                      <h4>Services</h4>
+                      <ul>
+                          <li><a href="#">Room Service </a></li>
+                          <li><a href="#">Swiming Pool</a></li>
+                          <li><a href="#">Download App</a></li>
+                          <li><a href="#">Coupons</a></li>
+                          <li><a href="#">Widrawal</a></li>
+                          
+                      </ul>
+                  </div>
+                  <div class="footer-col">
+                      <h4>Follow us</h4>
+                      <div class="social-links">
+                          <a href="https://www.facebook.com/hotelcardch"><i class="fab fa-facebook-f"></i></a>
+                          <a href="http://www.instagram.com/hotelcardch"><i class="fab fa-instagram"></i></a>
+                          <a href="https://pin.it/48fy7DC"><i class="fab fa-pinterest"></i></a>
+                      </div>
+                  </div>
+               </div>
+              </div>
+          </footer>
+
 
 </body>
 
