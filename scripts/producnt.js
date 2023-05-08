@@ -119,7 +119,7 @@ function displaycard(hotel) {
                             <span class="fa fa-star"></span>`
     buy.addEventListener("click", (event) => {
        event.preventDefault();
-         Swal.fire({
+     Swal.fire({
                 title: `${hotel.name}`,
                 text: `Is Select For Booking`,
                 imageUrl: `${hotel.avatar}`,
@@ -131,6 +131,9 @@ function displaycard(hotel) {
             hotelLS.push({ ...hotel, day: 1, Guest: 0 });
             localStorage.setItem("hotelCard", JSON.stringify(hotelLS))
             //   console.log("ok")
+            window.location.href="./booking.html"
+                
+
  
     })
     cardbuy.append(stars, price, tax, buy)
