@@ -5,7 +5,6 @@
 }
 .container{
     width: 50%;
-
     height: 90vh;
     position: relative;
     transform: translate(10%,10%);
@@ -28,7 +27,7 @@
    
 }
 .swiper-wrapper img{
-    width: 100%;
+    width: 500%;
     height: 80vh;
     border-radius: 20px;
 }
@@ -39,29 +38,35 @@
     10%{
         transform: translateX(0);
     }
-    25%{
+    20%{
+        transform: translateX(-100%);
+    }
+    30%{
         transform: translateX(-100%);
     }
     40%{
-        transform: translateX(-100%);
-    }
-    55%{
         transform: translateX(-200%);
     }
-    65%{
+    50%{
         transform: translateX(-200%);
     }
-    75%{
+60%{
         transform: translateX(-300%);
+    }
+    70%{
+        transform: translateX(-300%);
+    }
+    80%{
+        transform: translateX(-400%);
     }
     85%{
-        transform: translateX(-300%);
+        transform: translateX(-400%);
     }
     90%{
-        transform: translateX(-400%);
+        transform: translateX(-500%);
     }
     100%{
-        transform: translateX(-400%);
+        transform: translateX(-500%);
     }
 }
 .swiper .swiper-button-prev, .swiper .swiper-button-next{
