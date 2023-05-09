@@ -5,6 +5,10 @@ let userPassword = document.querySelector("#userPassword")
 let userEmail = document.querySelector("#userEmail")
 let userlogin = document.querySelector("#login-btn")
 let btn = document.querySelector("#create-btn")
+let admin = document.querySelector("#admin")
+admin.addEventListener("click",function(){
+	window.location.href = "admin.html"
+})
 btn.addEventListener("click",function(){
     window.location.href="signup.html"
 })
@@ -23,7 +27,7 @@ console.log(userEmail.value,userPassword.value)
 if(flag){
 	
 	alert("login Sucessfully")
-    window.location.href="#"
+    window.location.href="product.html"
 }else{
 	main1.style.display = "block"
 	main1.innerText="wrongPassword or user name"

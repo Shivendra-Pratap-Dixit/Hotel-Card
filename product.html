@@ -1,111 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    
-
     <link rel="stylesheet" href="./styles/product.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
     <title>View All Hotels</title>
 </head>
+
 <body>
-     <nav></nav>
-     <div id="path">
+    <div class="nav">
+        <div class="menu">
+            <a href="./index.html"><img id="bg" src="https://hotelcard.com/images/hotelcard-logo.png" alt=""></a>
+            <a class="anc" href="#">Buy the card</a>
+            <a class="anc" href="#">Book a hotel</a>
+            <a class="anc" href="#">How it works</a>
+            <a class="anc" href="#">About us</a>
+            <a class="anc" href="#">Gift card</a>
+        </div>
+
+        <div class="login">
+            <a href="./hotelcard.html"><button class="log" id="Hotelcard">Buy HotelCard</button></a>
+            <a href=""><button class="log" id="Login">Login</button></a>
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+
+        </div>
+    </div>
+
+    <div id="path">
         <h3>Home / <span>view all hotels</span> </h3>
-     </div>
-     <div id="navigate">
+    </div>
+    <div id="navigate">
         <input type="search" id="sreachinput" placeholder="Destination, Hotel or">
         <select name="distance" id="distance">
-            <option value="" id="km1">- km</option>
+            <option value="" id="km1">10km</option>
             <option value="5km">+ 5 km</option>
             <option value="10km">+ 10 km</option>
             <option value="5km">+ 20 km</option>
             <option value="5km">+ 30 km</option>
             <option value="5km">+ 50 km</option>
         </select>
-        <select name="" id="data">
-            <option value="">Anytime</option>
 
-        </select>
+        <input type="date">
         <select name="" id="guest">
             <option value="">2 Guests</option>
             <div id="adult">
-                <option value="adult">Adults 
-                <button>-</button>
-                <button>2</button>
-                <button>+</button>
+                <option value="adult">Adults
+                    <button>-</button>
+                    <button>2</button>
+                    <button>+</button>
                 </option>
-                
+
             </div>
             <div id="children">
                 <option value="children">Children
-                <button>-</button>
-                <button>0</button>
-                <button>+</button>
+                    <button>-</button>
+                    <button>0</button>
+                    <button>+</button>
                 </option>
             </div>
             <div id="infants">
                 <option value="infants">Infants
-                <button>-</button>
-                <button>0</button>
-                <button>+</button>
+                    <button>-</button>
+                    <button>0</button>
+                    <button>+</button>
                 </option>
             </div>
-           
+
         </select>
         <div id="search">
             <i class="fa-solid fa-magnifying-glass"></i>
             <h2>Search</h2>
         </div>
-       
-     </div>
-     <div id="produnct">
+
+    </div>
+    <div id="produnct">
         <div id="left">
-            <div id="filter">
-            <p>Filter by:</p>
-            <p>Reset filters</p>
-            <hr>
-        </div>
-        <div  id="discount">
-            <h4>Discount</h4>
-            <div id="checkbox">
-                <li>
-                    <input type="checkbox" id="Discount50" class="checkbox"><span>50%</span>
-                </li>
-                <li>
-                    <input type="checkbox" id="Discount30" class="checkbox"><span>30%</span>
-                </li>
-                <li>
-                    <input type="checkbox" id="Discount10" class="checkbox"><span>10%</span>
-                </li>
+            <div id="filterPart">
+                <p>Filter by:</p>
 
+                <div id="reviewfilter">
+                    <select name="" id="filter">
+                        <option value="">Review</option>
+                        <option value="wonderfull">Wonderfull</option>
+                        <option value="excellent">Excellent</option>
+                        <option value="very_good">Very Good</option>
+                        <option value="good">Good</option>
+
+                    </select>
+
+                </div>
+
+                <hr>
             </div>
+            <div id="discount">
+                <h4>Discount</h4>
+                <div id="checkbox">
+                    <li>
+                        <input type="checkbox" id="Discount50" class="checkbox"><span>50%</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="Discount30" class="checkbox"><span>30%</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="Discount10" class="checkbox"><span>10%</span>
+                    </li>
 
-        </div>
+                </div>
+
+
+                <div id="star">
+                    <div>
+                        <input type="checkbox" id="Discount50" class="checkbox"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star "></span>
+                        <span class="fa fa-star "></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Discount50" class="checkbox"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star "></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Discount50" class="checkbox"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Discount50" class="checkbox"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox"><span>Not classified</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox"><span>Swiss Lodge</span>
+                    </div>
+
+                </div>
+
+                <div id="experience">
+                    <p>Experiences</p>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>City Trip Hotels</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Wellness & Spa Hotels</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Design, Lifestyle & Boutique hotels</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Waterfront hotels</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Hiking Hotels</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Historical Hotels</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Country Hotels</span>
+                    </div>
+                </div>
+
+                <div id="amenities">
+                    <p>Amenities</p>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Air condition</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Elevator</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Breakfast</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Breakfast buffet</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Breakfast in the room (additional charge)</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Restaurant</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Organically produced food</span>
+                    </div>
+                </div>
+
+                <div id="region">
+                    <p>Regions</p>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Switzerland</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Aargau</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Basel (region)</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Bern (region)</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Bernese Oberland </span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Eastern Switzerland / Liechtenstein</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Fribourg (region)</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Graubünden</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>ura and Three-Lakes</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Lake Constance</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Lake Geneva region</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Ticino</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Valais</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Zurich (region)</span>
+                    </div>
+                </div>
+
+                <div id="rate">
+                    <p>Rating</p>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Excellent (4.4+)</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Very Good (4.1 – 4.3)</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Good (3.8 – 4.0)</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Fair (3.5 – 3.7)</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>No rating</span>
+                    </div>
+                </div>
+
+                <div id="recent">
+                    <p>Latest Hotels</p>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Recently added hotels</span>
+                    </div>
+                </div>
+                <div id="favourite">
+                    <p>Favourite hotels</p>
+                    <div>
+                        <input type="checkbox" class="checkbox1"><span>Members favourites</span>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="right">
-                <select id="sort">
-                    <option value="">Sort By: Relevance</option>
-                    <option value="atoz">Price low to high</option>
-                    <option value="ztoa">Price high to low</option>
-                    <option value="rating">Best User rating</option>
-                </select>
-                    <div id="map">
-                        <i class="fa-solid fa-location-dot"> <span>Map View</span></i>
-                    </div>
-                <div id="container"></div>
-                <div id="pagination"></div>
+            <div id="sort">
+                <button id="dist">Nearby me</button>
+                <button id="atoz">Sort By Price Low to High</button>
+                <button id="ztoa">Sort By Price High to Low</button>
+            </div>
+            <div id="container"></div>
+            <div id="pagination"></div>
         </div>
-     </div>
+    </div>
+
+    <!-- ===============footer================= -->
+
+    <footer class="footer">
+        <div class="containe">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>About Hotel Card</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Investor Information</a></li>
+                        <li><a href="#">Organizational Accounts</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">Real Estate</a></li>
+                        <li><a href="#">Vendors</a></li>
+                        <li><a href="#">FAQs</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Experience</h4>
+                    <ul>
+                        <li><a href="#">Wellness hotels and spa</a></li>
+                        <li><a href="#">Track My Bookings</a></li>
+                        <li><a href="#">Boutique hotels</a></li>
+                        <li><a href="#">Accessibility Statement</a></li>
+                        <li><a href="#">Accessbility Support</a></li>
+                        <li><a href="#">Mountain bike hotels</a></li>
+                        <li><a href="#">Mountain hotels</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hotel Offers</h4>
+                    <ul>
+                        <li><a href="#">Best price guarantee</a></li>
+                        <li><a href="#">Hotels in Zürich</a></li>
+                        <li><a href="#">Hotels in Davos</a></li>
+                        <li><a href="#">Hotels in Genf</a></li>
+                        <li><a href="#">Hotels in Lausanne</a></li>
+                        <li><a href="#">Hotels in Saas-Fee</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Room Service </a></li>
+                        <li><a href="#">Swiming Pool</a></li>
+                        <li><a href="#">Download App</a></li>
+                        <li><a href="#">Coupons</a></li>
+                        <li><a href="#">Widrawal</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/hotelcardch"><i class="fab fa-facebook-f"></i></a>
+                        <a href="http://www.instagram.com/hotelcardch"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pin.it/48fy7DC"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-
 <script src="./scripts/producnt.js"></script>
-
 
 </html>

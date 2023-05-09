@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy HotelCard</title>
-    <link rel="icon" type="image/jpg" href="https://hotelcard-files.ams3.cdn.digitaloceanspaces.com/media/appicons/ios/App-icon_152x152.jpg">
-    <link rel="stylesheet" href="./styles/hotelcard.css">
+    <link rel="stylesheet" href="hotelcard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
@@ -16,15 +15,14 @@
         <div class="menu">
         <a  href="./index.html"><img id="bg" src="https://hotelcard.com/images/hotelcard-logo.png" alt=""></a>
         <a class="anc" href="./hotelcard.html">Buy the card</a>
-        <a class="anc" href="./product.html">Book a hotel</a>
+        <a class="anc" href="#">Book a hotel</a>
         <a class="anc" href="#">How it works</a>
         <a class="anc" href="#">About us</a>
-        <a class="anc" href="./hotelcard.html">Gift card</a>
+        <a class="anc" href="#">Gift card</a>
         </div>
         <div class="login">
             <a href="./hotelcard.html"><button class="log" id="Hotelcard">Buy HotelCard</button></a>
-            <a href="./login.html"><button class="log" id="Login">Login</button></a>
-
+            <a href=""><button class="log" id="Login">Login</button></a>
         </div>
         <div class="hamburger">
             <div class="line"></div>
@@ -35,7 +33,7 @@
         </div>
 
         <!-- card making for hotelcard  -->
-        <h1 style="text-align: center; font-style: italic;font-family: 'Poppins', sans-serif;" class="title">Buy Hotel Card</h1>
+        <h1 style="text-align: center; font-style: italic;font-family: cursive;" class="title">Buy Hotel Card</h1>
         <hr>
         <div class="cont">
             <div class="card">
@@ -72,10 +70,9 @@
 <input type="text" name="add" placeholder="Building no:" required>
 <label for="Zip">Zip code</label>
 <input type="number" name="Zip" placeholder="Zip Code" required>
-<label for="amount">Amount</label>
-<input type="number" name="amount" placeholder="Amount" required>
 
-<button id="submitbtn">Buy Now</button>
+
+<button class="submit">Buy Now</button>
             </form>
             
         </div>
@@ -149,7 +146,7 @@
 </html>
 <script>
     // let form=document.querySelector("section");
-    let submitbtn=document.getElementById("submitbtn");
+    let submitbtn=document.getElementsByClassName("submit");
     submitbtn.addEventListener("click",function(){
         alert("Card Buy Succesfully");
     });

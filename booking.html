@@ -7,6 +7,132 @@
     <title>Booking page</title>
 
     <style>
+      *{
+        font-family: 'Poppins', sans-serif;
+      }
+      
+  
+  .nav{
+        display: flex;
+        width: 100%;
+        height: 75px;
+        margin: 0 ,auto;
+        background-color: #ffffff;
+        align-items:center;
+        position: sticky;
+        top: 0;
+        
+    }
+      
+    .menu{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 65%;
+        height: 75px;
+        
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+        font-family: 'Poppins', sans-serif;
+        font-weight:600;
+    }
+    #bg{
+        width: 85%;
+        height: 70px;
+    }
+    .login{
+        display: flex;
+        height: 75px;
+        width: 40%;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        
+    }
+   
+    .login>.log{
+        padding:18px 35px;
+        border-radius: 25px;
+        margin-left: 10px;
+        font-weight: 800;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .login>#Hotelcard,.login>#Login:hover{
+        background-color: #f74d4d;
+        color: #ffffff;
+        border: none;
+    }
+    .login>#Hotelcard:hover,.login>#Login{
+        background-color: #ffffff;
+        color: #f74d4d;
+        border:1px solid #f74d4d;
+    }
+
+
+    @media only screen and (max-width:800px){
+        .hamburger{
+            display: block;
+            cursor: pointer;
+    color: #000;
+        }
+        .hamburger .line {
+            width: 30px;
+            height: 3px;
+            background: #000;
+            margin: 6px 0;
+        }
+        .anc{
+            display: none;
+        }
+    }
+    @media only screen and (max-width:1100px){
+        .nav{
+            padding: 0 70px;
+        }
+        .input_ref>.Form{
+            grid-template-columns: repeat(3,1fr);
+        }
+        .container{
+            grid-template-columns: repeat(3,1fr);
+            
+        }
+
+    }
+    @media only screen and (max-width:1000px){
+        .nav{
+            padding: 0 50px;
+        }
+        .container{
+            grid-template-columns: repeat(2,1fr);
+            
+        }
+    }
+    @media only screen and (max-width:850px){
+        .nav{
+            padding: 0 40px;
+            margin:0 5px
+        }
+        .input_ref>.Form{
+            grid-template-columns: repeat(2,1fr);
+        }
+        .container{
+            grid-template-columns: repeat(1,1fr);
+            
+        }
+    }
+    
+    
+      /* navbar */
+
+
+
+   
+
+
+
         #booking-container{
             width: 90%;
             /* border: 1px solid red; */
@@ -16,10 +142,11 @@
             gap: 15px;
             box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
             padding: 20px;
-            margin-top: 30px;
+            margin-top: 40px;
+            margin-bottom: 30px;
         
         }
-        #box1{
+        #box3{
             width: 30%;
             /* border: 1px solid green; */
             text-align: center;
@@ -30,20 +157,146 @@
             /* border: 1px solid yellow; */
             /* text-align: center; */
         }
-        #box3{
+        #box1{
             width: 30%;
           /* border: 1px solid red; */
         }
 
-        #box3>img{
+        #box1>img{
             width: 100%;
             /* margin-left: 20px; */
             border-radius: 20px;
         }
+
+
+       @media screen and (max-width:500px){
+        #booking-container{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+       }
+
+       @media screen and (min-width:500px) and (max-width:900px){
+        #booking-container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+       }
+
+        /* footer */
+
+       
+    .containe{
+        max-width: 1170px;
+        margin: auto;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    ul{
+        list-style: none;
+    }
+    .footer{
+        background-color:#1f1b22;
+        padding:70px 0
+    
+    }
+    .footer-col{
+    width: 25%;
+    padding: 0 15px;
+    }
+    .footer-col h4{
+        font-size: 25px;
+        color:whitesmoke;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+        position: relative;
+    
+    }
+    .footer-col h4::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        background-color:red;
+        height: 2px;
+        box-sizing: border-box;
+        width: 200px;
+    }
+    .footer-col ul li:not(last-chlid){
+        margin-bottom: 15px;
+    }
+    .footer-col ul li a{
+        font-size: 16px;
+        text-transform: capitalize;
+        color:#fefefe;
+        text-decoration: none;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    .footer-col ul li a:hover{
+        color: teal;
+        padding-left: 8px;
+    }
+    .footer-col .social-links a{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color:#fefefe;
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        color:black;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+    }
+    .footer-col .social-links a:hover{
+        color: brown;
+        padding-left: 10px;
+    }
+
+
+    @media (max-width: 750px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+        
+    }
        
     </style>
 </head>
 <body>
+
+  <!-- navbar -->
+  <div class="nav">
+    <div class="menu">
+    <a  href="./index.html"><img id="bg" src="https://hotelcard.com/images/hotelcard-logo.png" alt=""></a>
+    <a class="anc" href="#">Buy the card</a>
+    <a class="anc" href="#">Book a hotel</a>
+    <a class="anc" href="#">How it works</a>
+    <a class="anc" href="#">About us</a>
+    <a class="anc" href="#">Gift card</a>
+    </div>
+    <div class="login">
+        <button class="log" id="Hotelcard">Buy HotelCard</button>
+        <button class="log" id="Login">Login</button>
+    </div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+
+    </div>
+    </div>
+
+
+          <!-- navbar -->
+
+
+
+
 
 <div id="booking-container">
     <div id="box1">
@@ -58,12 +311,77 @@
     </div>
 </div>
 
+    <!-- footer -->
+
+    <footer class="footer">
+      <div class="containe">
+       <div class="row">
+          <div class="footer-col">
+              <h4>About Hotel Card</h4>
+              <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Investor Information</a></li>
+                  <li><a href="#">Organizational Accounts</a></li>
+                  <li><a href="#">Newsroom</a></li>
+                  <li><a href="#">Real Estate</a></li>
+                  <li><a href="#">Vendors</a></li>
+                  <li><a href="#">FAQs</a></li>
+  
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Experience</h4>
+              <ul>
+                  <li><a href="#">Wellness hotels and spa</a></li>
+                  <li><a href="#">Track My Bookings</a></li>
+                  <li><a href="#">Boutique hotels</a></li>
+                  <li><a href="#">Accessibility Statement</a></li>
+                  <li><a href="#">Accessbility Support</a></li>
+                  <li><a href="#">Mountain bike hotels</a></li>
+                  <li><a href="#">Mountain hotels</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Hotel Offers</h4>
+              <ul>
+                  <li><a href="#">Best price guarantee</a></li>
+                  <li><a href="#">Hotels in Zürich</a></li>
+                  <li><a href="#">Hotels in Davos</a></li>
+                  <li><a href="#">Hotels in Genf</a></li>
+                  <li><a href="#">Hotels in Lausanne</a></li>
+                  <li><a href="#">Hotels in Saas-Fee</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Services</h4>
+              <ul>
+                  <li><a href="#">Room Service </a></li>
+                  <li><a href="#">Swiming Pool</a></li>
+                  <li><a href="#">Download App</a></li>
+                  <li><a href="#">Coupons</a></li>
+                  <li><a href="#">Widrawal</a></li>
+                  
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Follow us</h4>
+              <div class="social-links">
+                  <a href="https://www.facebook.com/hotelcardch"><i class="fab fa-facebook-f"></i></a>
+                  <a href="http://www.instagram.com/hotelcardch"><i class="fab fa-instagram"></i></a>
+                  <a href="https://pin.it/48fy7DC"><i class="fab fa-pinterest"></i></a>
+              </div>
+          </div>
+       </div>
+      </div>
+  </footer>
+
     
 </body>
 
 <script>
 
 let hotelLS = JSON.parse(localStorage.getItem("hotelCard"))||[]
+console.log(hotelLS)
 let bookingcontainer=document.getElementById("booking-container")
 let box1=document.getElementById("box1")
 let box2=document.getElementById("box2")
@@ -104,9 +422,10 @@ function displayhotel(data){
        
       let Increaseforday=document.createElement("button");
         Increaseforday.textContent="+"
-        Increaseforday.style.backgroundColor="white"
-        Increaseforday.style.color="black"
-        Increaseforday.style.padding="3px"
+        Increaseforday.style.backgroundColor="black"
+        Increaseforday.style.color="white"
+        Increaseforday.style.padding="8px"
+        Increaseforday.style.borderRadius="5px"
 
         Increaseforday.addEventListener("click",()=>{
         element=element.day++;
@@ -124,10 +443,12 @@ function displayhotel(data){
         
         let Decreaseforday=document.createElement("button");
         Decreaseforday.textContent="-"
-        Decreaseforday.style.backgroundColor="white"
-        Decreaseforday.style.color="black"
-        Decreaseforday.style.padding="3px"
+        Decreaseforday.style.backgroundColor="black"
+        Decreaseforday.style.color="white"
+        Decreaseforday.style.padding="8px"
         Decreaseforday.style.marginLeft="3px"
+        Decreaseforday.style.borderRadius="5px"
+
 
 
        
@@ -144,9 +465,11 @@ function displayhotel(data){
 
         let Increaseforguest=document.createElement("button");
         Increaseforguest.textContent="+"
-        Increaseforguest.style.backgroundColor="white"
-        Increaseforguest.style.color="black"
-        Increaseforguest.style.padding="3px"
+        Increaseforguest.style.backgroundColor="black"
+        Increaseforguest.style.color="white"
+        Increaseforguest.style.padding="8px"
+        Increaseforguest.style.borderRadius="5px"
+
 
         Increaseforguest.addEventListener("click",()=>{
         element=element.Guest++;
@@ -164,10 +487,12 @@ function displayhotel(data){
 
         let Decreaseforguest=document.createElement("button");
         Decreaseforguest.textContent="-"
-        Decreaseforguest.style.backgroundColor="white"
-        Decreaseforguest.style.color="black"
-        Decreaseforguest.style.padding="3px"
+        Decreaseforguest.style.backgroundColor="black"
+        Decreaseforguest.style.color="white"
+        Decreaseforguest.style.padding="8px"
         Decreaseforguest.style.marginLeft="3px"
+        Decreaseforguest.style.borderRadius="5px"
+
 
 
 
@@ -205,7 +530,7 @@ function displayhotel(data){
         
       let paybtn=document.createElement("button");
       paybtn.textContent="PROCEED TO BOOKING"
-      paybtn.style.backgroundColor=" rgb(247,77,77)"
+      paybtn.style.backgroundColor="rgb(247,77,77)"
       paybtn.style.color="white";
       paybtn.style.border="none"
       paybtn.style.width="250px";
@@ -222,9 +547,9 @@ function displayhotel(data){
         
       })
 
-      box1.append(day,Increaseforday,Decreaseforday,guest,paragraphguest,Increaseforguest,Decreaseforguest,totalprice,paragraph,paybtn)
+      box3.append(day,Increaseforday,Decreaseforday,guest,paragraphguest,Increaseforguest,Decreaseforguest,totalprice,paragraph,paybtn)
       box2.append(title,details,rating,price)
-      box3.append(image)
+      box1.append(image)
       bookingcontainer.append(box1,box2,box3)
 
 
