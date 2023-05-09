@@ -46,3 +46,7 @@ In this project we have tried to achieve like the  original design as much as po
 ### Limitations
 
 Pages are not fully responsive yet, those pages might not be properly visible on small screen devices as we were given only 5 days to clone the website.
+
+
+### Deploy link :- 
+   https://645a5d5adff760368d75e97b--meek-praline-3569d1.netlify.app/
