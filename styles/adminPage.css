@@ -2,7 +2,6 @@
   width: 90%;
   display: flex;
   margin: auto;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
 
 }
 
@@ -11,10 +10,6 @@
  margin: auto;
  
 
-}
-*{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-    box-sizing: border-box;
 }
 
 /* .accordion {
@@ -83,109 +78,108 @@
   margin: 0;
   box-sizing: border-box;}
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-.nav{
-  display: flex;
-  width: 100%;
+  .nav{
+      display: flex;
+      width: 100%;
+      height: 75px;
+      margin: 0 ,auto;
+      background-color: #ffffff;
+      align-items:center;
+          
+  }
+  .menu{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 65%;
+      height: 75px;
+      
+  }
+  a{
+      text-decoration: none;
+      color: black;
+      font-family: 'Poppins', sans-serif;
+      font-weight:600;
+  }
+  #bg{
+      width: 85%;
+      height: 70px;
+  }
+  .login{
+      display: flex;
+      height: 75px;
+      width: 40%;
+      justify-content: space-evenly;
+      align-items: center;
+      
+      
+  }
  
-  background-color: #ffffff;
-  align-items:center;
-  
-}
-.menu{
-  
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 30px;
-  height: 75px;
-  
-}
-.menu a{
-  text-decoration: none;
-  color: black;
-  font-family: 'Poppins', sans-serif;
-  font-weight:600;
-}
-#bg{
-  width: 85%;
-  height: 70px;
-}
-.login{
-  display: flex;
-  height: 75px;
-  /* width: 40%; */
-  gap: 20px;
-  justify-content: space-evenly;
-  align-items: center;
-  
-  
-}
-
-.login>a>.log{
-  padding:18px 35px;
-  border-radius: 25px;
-  margin-left: 10px;
-  font-weight: 800;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.login>a>#Hotelcard,.login>a>#Login:hover{
-  background-color: #f74d4d;
-  color: #ffffff;
-  border: none;
-}
-.login>a>#Hotelcard:hover,.login>a>#Login{
-  background-color: #ffffff;
-  color: #f74d4d;
-  border:1px solid #f74d4d;
-}
-.title{
-  color:black;
-  text-align: center;
-  margin-top: 0px;
-  font-family: sans-serif;
-  font-weight: 600;
-  font-size: 40px;
-   padding: 2vh 0;
-color: #fff;
-margin-bottom: 10px;
-text-shadow: 2px 1px 5px #000;
-}
-.input_ref{
-  background-image: url(https://wallpapers.com/images/hd/switzerland-village-by-the-lake-c2s925gxhnk7bz8v.jpg);
-  height: 80vh;
-}
-.input_ref>p{
+  .login>.log{
+      padding:18px 35px;
+      border-radius: 25px;
+      margin-left: 10px;
+      font-weight: 800;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .login>#Hotelcard,.login>#Login:hover{
+      background-color: #f74d4d;
+      color: #ffffff;
+      border: none;
+  }
+  .login>#Hotelcard:hover,.login>#Login{
+      background-color: #ffffff;
+      color: #f74d4d;
+      border:1px solid #f74d4d;
+  }
+  .title{
+      color:black;
+      text-align: center;
+      margin-top: 0px;
+      font-family: sans-serif;
+      font-weight: 600;
+      font-size: 40px;
+       padding: 2vh 0;
   color: #fff;
-  text-align: center;
-  font-size: 30px;
+  margin-bottom: 10px;
   text-shadow: 2px 1px 5px #000;
-}
-.input_ref>.Form{
-  background: transparent;
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 10px;
-  justify-content: space-around;
-  width: 45%;
-  margin: 0 auto;
-  margin-top: 20px;
+  }
+  .input_ref{
+      background-image: url(https://wallpapers.com/images/hd/switzerland-village-by-the-lake-c2s925gxhnk7bz8v.jpg);
+      height: 80vh;
+  }
+  .input_ref>p{
+      color: #fff;
+      text-align: center;
+      font-size: 30px;
+      text-shadow: 2px 1px 5px #000;
+  }
+  .input_ref>.Form{
+      background: transparent;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 10px;
+      justify-content: space-around;
+      width: 45%;
+      margin: 0 auto;
+      margin-top: 20px;
 
 
-}
+  }
+  
+  .input_ref>.Form>.fin,option{
+      padding: 15px 15px 15px 15px;
+      border: none;
+      border-radius: 5px;
 
-.input_ref>.Form>.fin,option{
-  padding: 15px 15px 15px 15px;
-  border: none;
-  border-radius: 5px;
-
-}
-.input_ref>.Form>#searchbtn{
-  background-color: #f74d4d;
-  color:#fff;    
-  border-radius: 20px;
-  padding: 0px 25px 0px 25px;
-  font-size: 20px;
-}
+  }
+  .input_ref>.Form>#searchbtn{
+      background-color: #f74d4d;
+      color:#fff;    
+      border-radius: 20px;
+      padding: 0px 25px 0px 25px;
+      font-size: 20px;
+  }
   /* <!-- HTML !-->
 <button class="" role="button">Button 44</button> */
 
@@ -267,15 +261,10 @@ text-shadow: 2px 1px 5px #000;
           grid-template-columns: repeat(2,1fr);
       }
   }
-  .card-item{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-    
-  }
+  
   .card{
     width: 100%;
     margin:0px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-    
   }
   .accordion{
     margin: 40px 0;
@@ -304,7 +293,6 @@ text-shadow: 2px 1px 5px #000;
       background: transparent;
       padding: 0px;
       margin: 2px;
-      
   }
   
   .accordion .item .item-header h2 button {
@@ -315,8 +303,6 @@ text-shadow: 2px 1px 5px #000;
       width: 100%;
       text-align: left;
       background-color: #eca300;
-      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-    
   }
   
   .accordion .item .item-header h2 i {
@@ -340,81 +326,16 @@ text-shadow: 2px 1px 5px #000;
   button.btn.btn-link i {
       transform: rotate(180deg);
       transition: 0.5s;
-      
      
   }
   
   #sort-high{
     background-color: rgb(47, 46, 46);
-    /* margin: 10px; */
-    margin-top: 10px;
+    margin: 10px;
     border-radius: none;
-   
   }
   #sort-low-to-high{
     background-color: rgb(47, 46, 46);
-    
+    margin: 10px;
     border-radius: none;
-   
   }
-  .footer{
-    background-color:#1f1b22;
-    padding:70px 0
-
-}
-.ros{
-  display: flex;
-}
-.footer-col{
-width: 25%;
-padding: 0 15px;
-}
-.footer-col h4{
-    font-size: 25px;
-    color:whitesmoke;
-    text-transform: capitalize;
-    margin-bottom: 30px;
-    position: relative;
-
-}
-.footer-col h4::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    background-color:red;
-    height: 2px;
-    box-sizing: border-box;
-    width: 200px;
-}
-.footer-col ul li:not(last-chlid){
-    margin-bottom: 15px;
-}
-.footer-col ul li a{
-    font-size: 16px;
-    text-transform: capitalize;
-    color:#fefefe;
-    text-decoration: none;
-    display: block;
-    transition: all 0.3s ease;
-}
-.footer-col ul li a:hover{
-    color: teal;
-    padding-left: 8px;
-}
-.footer-col .social-links a{
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background-color:#fefefe;
-    margin: 0 10px 10px 0;
-    text-align: center;
-    line-height: 40px;
-    color:#000;
-    border-radius: 10px;
-    transition: all 0.5s ease;
-}
-.footer-col .social-links a:hover{
-    color: brown;
-    padding-left: 10px;
-}
