@@ -1,0 +1,358 @@
+
+    *{padding: 0;
+    margin: 0;
+    box-sizing: border-box;}
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+    .nav{
+        display: flex;
+        width: 100%;
+        height: 75px;
+        margin: 0 ,auto;
+        background-color: #ffffff;
+        align-items:center;
+        position: sticky;
+        top: 0;
+        
+    }
+    .menu{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 65%;
+        height: 75px;
+        
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        font-family: 'Poppins', sans-serif;
+        font-weight:600;
+    }
+    #bg{
+        width: 85%;
+        height: 70px;
+    }
+    .login{
+        display: flex;
+        height: 75px;
+        width: 40%;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        
+    }
+   
+    .login>a>.log{
+        padding:18px 35px;
+        border-radius: 25px;
+        margin-left: 10px;
+        font-weight: 800;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .login>a>#Hotelcard,.login>a>#Login:hover{
+        background-color: #f74d4d;
+        color: #ffffff;
+        border: none;
+    }
+    .login>a>#Hotelcard:hover,.login>a>#Login{
+        background-color: #ffffff;
+        color: #f74d4d;
+        border:1px solid #f74d4d;
+    }
+    .hamburger{
+        display: none;
+    }
+    .title{
+        color:black;
+        text-align: center;
+        margin-top: 0px;
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: 40px;
+         padding: 2vh 0;
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 2px 1px 5px #000;
+    }
+    .input_ref{
+        background-image: url(https://wallpapers.com/images/hd/switzerland-village-by-the-lake-c2s925gxhnk7bz8v.jpg);
+        height: 80vh;
+    }
+    .input_ref>p{
+        color: #fff;
+        text-align: center;
+        font-size: 30px;
+        text-shadow: 2px 1px 5px #000;
+    }
+    .input_ref>.Form{
+        background: transparent;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 10px;
+        justify-content: space-around;
+        width: 45%;
+        margin: 0 auto;
+        margin-top: 20px;
+
+
+    }
+    
+    .input_ref>.Form>.fin,option{
+        padding: 5px 5px 5px 5px;
+        border: none;
+        border-radius: 5px;
+
+    }
+    .input_ref>.Form>a>#searchbtn{
+        background-color: #f74d4d;
+        color:#fff;    
+        border-radius: 20px;
+        padding: 0px 25px 0px 25px;
+        font-size: 20px;
+        width: 120px;
+        height: 40px;
+    }
+    .containe{
+        max-width: 1170px;
+        margin: auto;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    ul{
+        list-style: none;
+    }
+    .footer{
+        background-color:#1f1b22;
+        padding:70px 0;
+        display: flex;
+    
+    }
+    .footer-col{
+    width: 25%;
+    padding: 0 15px;
+    }
+    .footer-col h4{
+        font-size: 25px;
+        color:whitesmoke;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+        position: relative;
+    
+    }
+    .footer-col h4::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        background-color:red;
+        height: 2px;
+        box-sizing: border-box;
+        width: 200px;
+    }
+    .footer-col ul li:not(last-chlid){
+        margin-bottom: 15px;
+    }
+    .footer-col ul li a{
+        font-size: 16px;
+        text-transform: capitalize;
+        color:#fefefe;
+        text-decoration: none;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    .footer-col ul li a:hover{
+        color: teal;
+        padding-left: 8px;
+    }
+    .footer-col .social-links a{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color:#fefefe;
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        color:#000;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+    }
+    .footer-col .social-links a:hover{
+        color: brown;
+        padding-left: 10px;
+    }
+    @media (max-width: 750px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+        
+    }
+    section  h1{
+        font-family:  sans-serif;
+        font-size: 5ch;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .contai{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        
+    }
+    .contai>.card{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        padding: 10px;
+        height: 54vh;
+        width: 46vh;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        justify-content: space-around;
+    }
+    .contai>.card:hover{
+        width: 48vh;
+        height: 56vh;
+    }
+
+    .contai>.card>a>.bookbtn{
+        padding: 15px;
+        margin: 12px 5px 15px 5px;
+        border-radius: 20px;
+        border:none;
+        background-color: #f74d4d;
+        color: #fefefe;
+        cursor: pointer;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .image>img{
+        width: 100%;
+        height: 200px;
+        border-radius: 5px;
+    }
+    .card>.card-head{
+        font-size: 25px;
+        font-weight: 800;
+    }
+    .card>h6{
+        font-size: 15px;
+    }
+    .card>.rating{
+        font-size: 15px;
+        font-weight: 800;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+    .card>.price{
+        font-size: 25px;
+        font-weight: 800;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    .card>.rating>.green{
+        background: teal;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+/* css for review card */
+.review{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    
+}
+.re{
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 300px;
+    padding: 20px;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    
+}
+.re:hover{
+    width: 320px;
+    height: 300px;
+}
+.ni{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+.ni>h5{
+text-transform: uppercase;
+}
+.ni>img{
+    width: 90px;
+    height: 100px;
+    border: .5px solid red;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+
+
+
+
+    @media only screen and (max-width:800px){
+        .hamburger{
+            display: block;
+            cursor: pointer;
+    color: #000;
+        }
+        .hamburger .line {
+            width: 30px;
+            height: 3px;
+            background: #000;
+            margin: 6px 0;
+        }
+        .anc{
+            display: none;
+        }
+    }
+    @media only screen and (max-width:1100px){
+        .nav{
+            padding: 0 70px;
+        }
+        .input_ref>.Form{
+            grid-template-columns: repeat(3,1fr);
+        }
+        .contai{
+            grid-template-columns: repeat(3,1fr);
+            
+        }
+
+    }
+    @media only screen and (max-width:1000px){
+        .nav{
+            padding: 0 50px;
+        }
+        .contai{
+            grid-template-columns: repeat(2,1fr);
+            
+        }
+    }
+    @media only screen and (max-width:850px){
+        .nav{
+            padding: 0 40px;
+            margin:0 5px
+        }
+        .input_ref>.Form{
+            grid-template-columns: repeat(2,1fr);
+        }
+        .contai{
+            grid-template-columns: repeat(1,1fr);
+            
+        }
+        .hamburger{
+            display: block;
+        }
+        .login>a>#Login{
+            display: none;
+        }
+    }
+    
