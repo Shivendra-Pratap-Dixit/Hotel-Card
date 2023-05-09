@@ -349,7 +349,7 @@ text-transform: uppercase;
             
         }
         .hamburger{
-            display: flex;
+            display: block;
         }
         .login>a>#Login{
             display: none;
