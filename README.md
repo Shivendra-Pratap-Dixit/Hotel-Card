@@ -49,4 +49,4 @@ Pages are not fully responsive yet, those pages might not be properly visible on
 
 
 ### Deploy link :- 
-   https://645a5d5adff760368d75e97b--meek-praline-3569d1.netlify.app/
+  https://645a633cf7f2233ad2360ed4--moonlit-biscochitos-f246b7.netlify.app/
