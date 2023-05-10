@@ -150,6 +150,7 @@ p{
     box-shadow: none;
     transform: translateY(0);
   }
+  /* //// */
 
   @media screen and (max-width: 480px) {
    
